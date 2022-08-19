@@ -44,4 +44,13 @@ class Invoice extends Model
     {
         return $this->belongsTo(City::class, 'city_id', 'city_id');
     }
+     /**
+     * province
+     *
+     * @return void
+     */
+    public function province()
+    {
+        return $this->belongsTo(Province::class, 'province_id', 'province_id');
+    }
 }
