@@ -34,4 +34,14 @@ class Invoice extends Model
     {
         return $this->belongsTo(Customer::class);
     }
+
+     /**
+     * city
+     *
+     * @return void
+     */
+    public function city()
+    {
+        return $this->belongsTo(City::class, 'city_id', 'city_id');
+    }
 }
