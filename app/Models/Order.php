@@ -26,4 +26,13 @@ class Order extends Model
     {
         return $this->hasMany(Review::class);
     }
+     /**
+     * product
+     *
+     * @return void
+     */
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }
