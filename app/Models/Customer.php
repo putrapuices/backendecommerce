@@ -26,4 +26,16 @@ class Customer extends Model
     {
         return $this->hasMany(Invoice::class);
     }
+    
+    /**
+     * createdAt
+     *
+     * @return Attribute
+     */
+    protected function createdAt(): Attribute
+    {
+        return Attribute::make(
+            get: fn ($value) => \Carbon\Carbon::locale('id')->parse($value)->translatedFormat('l, d F Y'),
+        );
+    }
 }
