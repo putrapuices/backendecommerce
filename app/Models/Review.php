@@ -25,4 +25,13 @@ class Review extends Model
     {
         return $this->belongsTo(Product::class);
     }
+    /**
+     * customer
+     *
+     * @return void
+     */
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class);
+    }
 }
