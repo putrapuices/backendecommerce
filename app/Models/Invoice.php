@@ -25,4 +25,13 @@ class Invoice extends Model
     {
         return $this->hasMany(Order::class);
     }
+     /**
+     * customer
+     *
+     * @return void
+     */
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class);
+    }
 }
